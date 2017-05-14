@@ -5,12 +5,10 @@
 
 'use strict';
 
-const dynamic = false;
+const HuePlatform = require('./lib/HuePlatform');
+const packageJson = require('./package.json');
 
-const HuePlatformModule = require('./lib/HuePlatform');
-const HuePlatform = HuePlatformModule.HuePlatform;
-
+// Called by homebridge when registering the plugin.
 module.exports = function(homebridge) {
-  HuePlatformModule.setHomebridge(homebridge);
-  homebridge.registerPlatform('homebridge-hue', 'Hue', HuePlatform, dynamic);
+  HuePlatform.loadPlatform(homebridge, packageJson, 'Hue', HuePlatform);
 };
