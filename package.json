@@ -3,24 +3,29 @@
   "description": "Homebridge plugin for Philips Hue",
   "author": "Erik Baauw",
   "license": "ISC",
-  "version": "1.0.0-0",
+  "version": "1.0.0-1",
   "keywords": [
     "homebridge-plugin",
     "homekit",
     "philips",
     "hue",
     "philipshue",
-    "philips-hue"
+    "philips-hue",
+    "deconz",
+    "raspbee",
+    "conbee"
   ],
   "main": "index.js",
   "engines": {
-    "homebridge": "^0.4.22",
-    "node": "^6.11.0"
+    "deconz": "2.04.77",
+    "homebridge": "0.4.28",
+    "node": "6.11.3"
   },
   "dependencies": {
     "deferred": "^0.7.8",
     "homebridge-lib": "0.0.2-0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "ws": "^3.2.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
